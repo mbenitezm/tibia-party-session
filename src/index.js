@@ -15,4 +15,4 @@ discordClient.on('message', (msg) => {
   }
 });
 
-discordClient.login(proccess.env.DISCORD_SECRET);
+discordClient.login(process.env.DISCORD_SECRET);

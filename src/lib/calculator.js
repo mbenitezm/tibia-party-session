@@ -20,7 +20,8 @@ const formatResult = (supplies, characters) => {
   return supplies
     .map((s, i) => {
       let payStr = s < 0 ? ' PAY!' : '';
-      return `${characters[i]}: ${s}${payStr}`;
+      sFloat = s * 1.0;
+      return `${characters[i]}: ${s.toLocaleString()}${payStr}`;
     })
     .join('\n');
 };
