@@ -1,7 +1,5 @@
 # Tibia party session calculator
 
-## Version 0.1.0
-
 Discord bot to calculate each party's member assigned share amount after a waste or profit of a hunt
 
 # Bot link
