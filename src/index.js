@@ -15,7 +15,7 @@ discordClient.on('message', (msg) => {
       console.log(response);
       msg.reply(response);
     } catch (error) {
-      msg.reply("I coulnd't understand your request");
+      msg.reply("I couldn't understand your request");
     }
   }
 });
