@@ -17,13 +17,16 @@ const calculate = (rawAnalysis) => {
 };
 
 const formatResult = (supplies, characters) => {
-  return supplies
-    .map((s, i) => {
-      let payStr = s < 0 ? ' PAY!' : '';
-      sFloat = s * 1.0;
-      return `${characters[i]}: ${s.toLocaleString()}${payStr}`;
-    })
-    .join('\n');
+  return (
+    '\n' +
+    supplies
+      .map((s, i) => {
+        const payStr = s < 0 ? ' PAY!' : '';
+        const sFloat = s * 1.0;
+        return `${characters[i]}: ${s.toLocaleString()}${payStr}`;
+      })
+      .join('\n')
+  );
 };
 
 export default calculate;
