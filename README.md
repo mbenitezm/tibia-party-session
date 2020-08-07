@@ -1,5 +1,7 @@
 # Tibia waste calculator
 
+## Version 0.1.0
+
 Discord bot to calculate each party's member assigned loot amount after a waste or profit of a hunt
 
 # Bot link
@@ -36,6 +38,6 @@ Bubble
 Output will look like
 
 ```
-Pilsner Stout Ale: 62002
-Yuuki Sama: 52306`
+Eternal Oblivion: 62,002
+Bubble: 52,306`
 ```
