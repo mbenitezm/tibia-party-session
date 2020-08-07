@@ -11,6 +11,7 @@ discordClient.on('ready', () => {
 discordClient.on('message', (msg) => {
   if (msg.content.includes('!waste')) {
     let response = calculate(msg.content);
+    console.log(response);
     msg.reply(response);
   }
 });
