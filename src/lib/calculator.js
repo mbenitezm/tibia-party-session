@@ -18,7 +18,8 @@ const calculate = (rawAnalysis) => {
 
 const formatResult = (supplies, characters) => {
   return (
-    '\n' + "Hunt loot share: \n"
+    '\n' +
+    'Hunt loot share: \n' +
     supplies
       .map((s, i) => {
         const payStr = s < 0 ? ' PAY!' : '';
