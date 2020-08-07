@@ -1,8 +1,8 @@
-# Tibia waste calculator
+# Tibia party session calculator
 
 ## Version 0.1.0
 
-Discord bot to calculate each party's member assigned loot amount after a waste or profit of a hunt
+Discord bot to calculate each party's member assigned share amount after a waste or profit of a hunt
 
 # Bot link
 
@@ -10,12 +10,12 @@ https://discord.com/api/oauth2/authorize?client_id=741023444145012873&permission
 
 # Usage
 
-Use the command `!waste` and afterwards paste the party hunt data copied to the clipboard.
+Use the command `!session` and afterwards paste the party hunt data copied to the clipboard.
 
 Ex:
 
 ```
-!waste Session data: From 2020-08-06, 16:38:14 to 2020-08-06, 17:29:11
+!session Session data: From 2020-08-06, 16:38:14 to 2020-08-06, 17:29:11
 Session: 00:50h
 Loot Type: Market
 Loot: 114,307

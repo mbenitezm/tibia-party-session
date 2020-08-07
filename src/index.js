@@ -9,7 +9,7 @@ discordClient.on('ready', () => {
 });
 
 discordClient.on('message', (msg) => {
-  if (msg.content.includes('!waste')) {
+  if (msg.content.includes('!session')) {
     let response = calculate(msg.content);
     console.log(response);
     msg.reply(response);
