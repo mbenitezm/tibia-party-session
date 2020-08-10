@@ -8,6 +8,8 @@ https://discord.com/api/oauth2/authorize?client_id=741023444145012873&permission
 
 # Usage
 
+Use the command `!share <level>` to get a range of levels you can share exp on a party with 
+
 Use the command `!session` and afterwards paste the party hunt data copied to the clipboard.
 
 Ex:
