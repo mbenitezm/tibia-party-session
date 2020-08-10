@@ -10,6 +10,10 @@ discordClient.on('ready', () => {
 });
 
 discordClient.on('message', (msg) => {
+  if (msg.member.user.id === process.env.BOT_ID) {
+    return;
+  }
+
   if (msg.content.includes('!session')) {
     try {
       let response = calculate(msg.content);
