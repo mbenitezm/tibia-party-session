@@ -22,9 +22,8 @@ const formatResult = (supplies, characters) => {
     'Hunt loot share: \n' +
     supplies
       .map((s, i) => {
-        const payStr = s < 0 ? ' PAY!' : '';
         const sFloat = s * 1.0;
-        return `${characters[i]}: ${s.toLocaleString()}${payStr}`;
+        return `${characters[i]}: ${s.toLocaleString()}`;
       })
       .join('\n')
   );
