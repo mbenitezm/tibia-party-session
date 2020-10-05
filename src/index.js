@@ -56,7 +56,4 @@ discordClient.on('message', async (msg) => {
   }
 });
 
-// discordClient.login(process.env.DISCORD_SECRET);
-discordClient.login(
-  'NzQxMDIzNDQ0MTQ1MDEyODcz.Xyxh3A.y7bCfczaRUebi2K160DKXvR2gtg'
-);
+discordClient.login(process.env.DISCORD_SECRET);

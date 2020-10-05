@@ -4,8 +4,7 @@ import fs from 'fs';
 import { parseYasirWorlds } from './parser';
 
 const isYasirOnline = async () => {
-  //const scrapedSite = await fetchData(process.env.YASIR_SITE);
-  const html = await fetchData('https://yasironline.tibiageeks.com/');
+  const html = await fetchData(process.env.YASIR_SITE);
   let $ = cheerio.load(html);
 
   const gameWorlds = await $('.online')
