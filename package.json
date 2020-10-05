@@ -8,10 +8,13 @@
     "start": "node ./dist/src/index.js"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3",
     "debug": "~2.6.9",
     "discord.js": "^12.2.0",
     "dotenv": "^8.0.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "puppeteer": "^5.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

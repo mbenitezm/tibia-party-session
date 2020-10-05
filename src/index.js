@@ -2,6 +2,7 @@ import discord from 'discord.js';
 import logger from 'morgan';
 import calculate from './lib/calculator';
 import share from './lib/share';
+import yasir from './lib/yasir';
 
 export const discordClient = new discord.Client();
 
@@ -9,7 +10,7 @@ discordClient.on('ready', () => {
   console.log(`Logged in as ${discordClient.user.tag}!`);
 });
 
-discordClient.on('message', (msg) => {
+discordClient.on('message', async (msg) => {
   if (msg.member.user.id === process.env.BOT_ID) {
     return;
   }
@@ -26,11 +27,24 @@ discordClient.on('message', (msg) => {
 
   if (msg.content.includes('!share')) {
     try {
-      const response = share(msg.content);
+      const response = await share(msg.content);
       console.log(response);
       msg.reply(response);
     } catch (error) {
       msg.reply("I couldn't understand your request");
+    }
+  }
+
+  if (msg.content.includes('!isyasironline')) {
+    try {
+      const response = await yasir(msg.content);
+      console.log(response);
+      msg.reply(response);
+    } catch (error) {
+      console.log(error);
+      msg.reply(
+        "There was an error checking if yasir was online, I'm sorry :("
+      );
     }
   }
 
@@ -42,4 +56,7 @@ discordClient.on('message', (msg) => {
   }
 });
 
-discordClient.login(process.env.DISCORD_SECRET);
+// discordClient.login(process.env.DISCORD_SECRET);
+discordClient.login(
+  'NzQxMDIzNDQ0MTQ1MDEyODcz.Xyxh3A.y7bCfczaRUebi2K160DKXvR2gtg'
+);

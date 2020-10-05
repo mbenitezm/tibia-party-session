@@ -21,3 +21,10 @@ export const parseSupplies = (rawAnalysis) => {
   );
   return temp;
 };
+
+export const parseYasirWorlds = (rawLocations) => {
+  return rawLocations.map((e) => {
+    let matches = e.match(/(.*)Yasir\swas/);
+    return matches[1];
+  });
+};
