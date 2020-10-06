@@ -19,7 +19,7 @@ discordClient.on('message', async (msg) => {
     try {
       let response = calculate(msg.content);
       console.log(response);
-      msg.reply(response);
+      msg.reply(response + '\n Have you tried my new !isyasironline command?');
     } catch (error) {
       msg.reply("I couldn't understand your request");
     }
@@ -37,6 +37,7 @@ discordClient.on('message', async (msg) => {
 
   if (msg.content.includes('!isyasironline')) {
     try {
+      msg.reply('Please wait a few seconds while I search for Yasir.');
       const response = await yasir(msg.content);
       console.log(response);
       msg.reply(response);
