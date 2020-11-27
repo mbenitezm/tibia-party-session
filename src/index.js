@@ -36,17 +36,20 @@ discordClient.on('message', async (msg) => {
   }
 
   if (msg.content.includes('!isyasironline')) {
-    try {
-      msg.reply('Please wait a few seconds while I search for Yasir.');
-      const response = await yasir(msg.content);
-      console.log(response);
-      msg.reply(response);
-    } catch (error) {
-      console.log(error);
-      msg.reply(
-        "There was an error checking if yasir was online, I'm sorry :("
-      );
-    }
+    msg.reply(
+      "I'm sorry, this is currently not working :(. I'll try to find yasir again soon!"
+    );
+    // try {
+    //   msg.reply('Please wait a few seconds while I search for Yasir.');
+    //   const response = await yasir(msg.content);
+    //   console.log(response);
+    //   msg.reply(response);
+    // } catch (error) {
+    //   console.log(error);
+    //   msg.reply(
+    //     "There was an error checking if yasir was online, I'm sorry :("
+    //   );
+    // }
   }
 
   if (msg.content.includes('!help')) {
