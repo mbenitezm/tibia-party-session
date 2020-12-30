@@ -19,7 +19,7 @@ discordClient.on('message', async (msg) => {
     try {
       let response = calculate(msg.content);
       console.log(response);
-      msg.reply(response + '\n Have you tried my new !isyasironline command?');
+      //msg.reply(response + '\n Have you tried my new !isyasironline command?');
     } catch (error) {
       msg.reply("I couldn't understand your request");
     }
@@ -55,7 +55,8 @@ discordClient.on('message', async (msg) => {
   if (msg.content.includes('!help')) {
     const reply = `Available commands: \n
              !share <level> \n
-             !session <data copied to clipboard from party hunt analyzer>`;
+             !session <data copied to clipboard from party hunt analyzer> \n
+             *Made by Nevaux on Calmera :D`;
     msg.reply(reply);
   }
 });
