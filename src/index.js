@@ -19,7 +19,7 @@ discordClient.on('message', async (msg) => {
     try {
       let response = calculate(msg.content);
       console.log(response);
-      //msg.reply(response + '\n Have you tried my new !isyasironline command?');
+      msg.reply(response);
     } catch (error) {
       msg.reply("I couldn't understand your request");
     }
