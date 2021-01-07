@@ -35,6 +35,15 @@ discordClient.on('message', async (msg) => {
     }
   }
 
+  if (msg.content.includes('!servers')) {
+    try {
+      const response = await discordClient.guilds;
+      msg.reply(response).size;
+    } catch (error) {
+      msg.reply("I couldn't understand your request");
+    }
+  }
+
   if (msg.content.includes('!isyasironline')) {
     msg.reply(
       "I'm sorry, this is currently not working :(. I'll try to find yasir again soon!"
