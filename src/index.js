@@ -3,6 +3,8 @@ import logger from 'morgan';
 import calculate from './lib/calculator';
 import share from './lib/share';
 import yasir from './lib/yasir';
+import rashid from './lib/rashid';
+import servers from './lib/servers';
 
 export const discordClient = new discord.Client();
 
@@ -37,15 +39,9 @@ discordClient.on('message', async (msg) => {
 
   if (msg.content.includes('!admincommand-servers')) {
     try {
-      const response = await discordClient.guilds;
-      const membersTotal = response.cache
-        .map((g) => g.memberCount)
-        .reduce((total, members) => members + total, 0);
-
-      msg.reply(
-        `I'm in ${response.cache.size} servers with a total of ${membersTotal} members`
-      );
+      msg.reply(servers(discordClient));
     } catch (error) {
+      console.log(error);
       msg.reply("I couldn't understand your request");
     }
   }
@@ -67,10 +63,18 @@ discordClient.on('message', async (msg) => {
     // }
   }
 
+  if (msg.content.includes('!rashid')) {
+    const location = rashid();
+    msg.reply(location.city, {
+      files: [location.image],
+    });
+  }
+
   if (msg.content.includes('!help')) {
     const reply = `Available commands: \n
              !share <level> \n
              !session <data copied to clipboard from party hunt analyzer> \n
+             !rashid \n
              *Made by Nevaux on Calmera :D`;
     msg.reply(reply);
   }
