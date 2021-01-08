@@ -38,7 +38,13 @@ discordClient.on('message', async (msg) => {
   if (msg.content.includes('!servers')) {
     try {
       const response = await discordClient.guilds;
-      msg.reply(response).size;
+      const membersTotal = response.cache
+        .map((g) => g.memberCount)
+        .reduce((total, members) => members + total, 0);
+
+      msg.reply(
+        `I'm in ${response.cache.size} servers with a total of ${membersTotal} members`
+      );
     } catch (error) {
       msg.reply("I couldn't understand your request");
     }
