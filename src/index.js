@@ -35,7 +35,7 @@ discordClient.on('message', async (msg) => {
     }
   }
 
-  if (msg.content.includes('!servers')) {
+  if (msg.content.includes('!admincommand-servers')) {
     try {
       const response = await discordClient.guilds;
       const membersTotal = response.cache
